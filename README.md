@@ -289,7 +289,7 @@ send("Creating " + alg + " secret key, plaintext:\n" + hexdump(key));
 
 Cela permet d'extraire dynamiquement toute clé cryptographique utilisée par l'application, y compris celles générées à partir de dérivations complexes (PBKDF2, etc.) — sans avoir besoin d'analyser l'algorithme de dérivation.
 
-![Frida Code Editor — script crypto-aes-key chargé avec Shell Access](images/24.png)
+![Frida Code Editor — script crypto-aes-key chargé avec Shell Access](images/24.jpeg)
 
 #### Script `bypass-emulator-detection`
 
@@ -301,7 +301,7 @@ J'ai chargé le script **`bypass-emulator-detection`** pour contourner les méca
 
 Le bouton **Injected Code** affiche le script Frida complet injecté dans le processus, incluant le bridge Java/Frida (`Java.perform`) et l'ensemble des hooks définis pour l'instrumentation runtime.
 
-![Popup Injected Frida Script](images/23.png)
+![Popup Injected Frida Script](images/23.jpeg)
 
 ---
 
@@ -331,7 +331,7 @@ MobSF génère un rapport dynamique complet accessible via **Generate Report** (
 - Données réseau interceptées
 - Résultats Frida
 
-![Rapport dynamique MobSF — vue consolidée](images/step7_report.png)
+![Rapport dynamique MobSF — vue consolidée](images/20.jpeg)
 
 ---
 
