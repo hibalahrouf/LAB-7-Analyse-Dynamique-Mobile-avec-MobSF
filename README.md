@@ -100,6 +100,7 @@ Le script MobSF démarre l'émulateur avec les flags nécessaires à l'analyse d
 
 
 # Windows (PowerShell)
+```
 .\scripts\start_avd.ps1 MobSF_DIVA_API_30
 ```
 
@@ -245,7 +246,7 @@ L'activité `jakhar.aseem.diva.APICredsActivity` s'est ouverte directement sur l
 
 Le rapport dynamique MobSF confirme la liste des activités exportées avec leurs screenshots capturés automatiquement :
 
-![Rapport MobSF — Section Exported Activity Tester](images/step6_report.png)
+![Rapport MobSF — Section Exported Activity Tester](images/20.png)
 
 **Référence OWASP Mobile :** M1 — Improper Credential Usage / M3 — Insecure Authentication
 
@@ -319,13 +320,13 @@ Cela permet d'extraire dynamiquement toute clé cryptographique utilisée par l'
 
 J'ai chargé le script **`bypass-emulator-detection`** pour contourner les mécanismes anti-émulateur. Ces mécanismes vérifient typiquement des propriétés système caractéristiques d'un émulateur : `ro.build.fingerprint`, IMEI, numéro de téléphone, présence de fichiers spécifiques, etc. Le script bypasse chacun de ces checks via des hooks Frida.
 
-![Frida — bypass-emulator-detection script chargé](images/20.jpeg)
+![Frida — bypass-emulator-detection script chargé](images/22.jpeg)
 
 #### Injected Code
 
 Le bouton **Injected Code** affiche le script Frida complet injecté dans le processus, incluant le bridge Java/Frida (`Java.perform`) et l'ensemble des hooks définis pour l'instrumentation runtime.
 
-![Popup Injected Frida Script](images/9.png)
+![Popup Injected Frida Script](images/23.png)
 
 ---
 
