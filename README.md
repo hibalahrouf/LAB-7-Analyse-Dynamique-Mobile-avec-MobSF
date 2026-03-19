@@ -1,30 +1,5 @@
 # Analyse Dynamique d'une Application Android Vulnérable avec MobSF & DIVA
 
----
-
-## Table des matières
-
-1. [Contexte & Objectifs](#1-contexte--objectifs)
-2. [Environnement technique](#2-environnement-technique)
-3. [Mise en place de l'infrastructure d'analyse](#3-mise-en-place-de-linfrastructure-danalyse)
-   - [3.1 Création de l'émulateur AVD](#31-création-de-lémulateur-avd-sans-play-store)
-   - [3.2 Clonage de MobSF](#32-clonage-du-dépôt-mobsf)
-   - [3.3 Lancement de l'émulateur via le script MobSF](#33-lancement-de-lémulateur-via-le-script-mobsf)
-   - [3.4 Déploiement de MobSF via Docker](#34-déploiement-de-mobsf-via-docker)
-4. [Analyse de l'application cible — DIVA](#4-analyse-de-lapplication-cible--diva)
-   - [4.1 Upload & Analyse statique](#41-upload--analyse-statique)
-   - [4.2 Lancement de l'analyse dynamique](#42-lancement-de-lanalyse-dynamique)
-5. [Tests de sécurité dynamiques](#5-tests-de-sécurité-dynamiques)
-   - [5.1 Insecure Logging](#51-insecure-logging--cwe-532)
-   - [5.2 TLS/SSL Security Testing](#52-tlsssl-security-testing--cwe-295)
-   - [5.3 Exported Activities — Access Control](#53-exported-activities--access-control-cwe-926)
-   - [5.4 Hardcoded Credentials](#54-hardcoded-credentials--cwe-798)
-   - [5.5 Input Validation Issues](#55-input-validation-issues--cwe-20)
-   - [5.6 Runtime Dependencies](#56-runtime-dependencies)
-   - [5.7 Instrumentation Frida](#57-instrumentation-frida)
-6. [Synthèse des vulnérabilités](#6-synthèse-des-vulnérabilités)
-7. [Rapport MobSF](#7-rapport-mobsf)
-8. [Conclusion](#8-conclusion)
 
 ---
 
@@ -314,7 +289,7 @@ send("Creating " + alg + " secret key, plaintext:\n" + hexdump(key));
 
 Cela permet d'extraire dynamiquement toute clé cryptographique utilisée par l'application, y compris celles générées à partir de dérivations complexes (PBKDF2, etc.) — sans avoir besoin d'analyser l'algorithme de dérivation.
 
-![Frida Code Editor — script crypto-aes-key chargé avec Shell Access](images/19.png)
+![Frida Code Editor — script crypto-aes-key chargé avec Shell Access](images/24.png)
 
 #### Script `bypass-emulator-detection`
 
